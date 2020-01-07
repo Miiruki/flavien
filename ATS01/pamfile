@@ -1,0 +1,7 @@
+#!/bin/bash
+for programmes in /bin/*; do
+    if ldd $programmes | grep libpam.so; then
+        ls -l $programmes
+    fi
+done
+
